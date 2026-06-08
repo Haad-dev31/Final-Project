@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Care Dashboard 🌿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-header">
+        <div class="header-top">
+            <h1>Plant Care Dashboard 🌿</h1>
+            <input type="text" id="searchBar" class="search-bar" placeholder="🔍 Search plants...">
+        </div>
+        <nav class="tab-menu">
+            <button class="tab-btn active" data-tab="All">All</button>
+            <button class="tab-btn" data-tab="Flowers">Flowers</button>
+            <button class="tab-btn" data-tab="Fruits & Trees">Fruits & Trees</button>
+            <button class="tab-btn" data-tab="Indoor & Medical">Indoor & Medical</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="selection-card">
+            <form id="addPlantForm">
+                <h3>Submit New Plant Record</h3>
+                <div class="form-grid">
+                    <div class="input-field">
+                        <label for="plantSelect">Select Plant:</label>
+                        <select id="plantSelect">
+                            <option value="">-- Choose from 100+ Plants --</option>
+                            <optgroup label="Flowers">
+                                <option value="Rose">Rose</option>
+                                <option value="Jasmine">Jasmine</option>
+                                <option value="Sunflower">Sunflower</option>
+                            </optgroup>
+                            <optgroup label="Fruits & Trees">
+                                <option value="Mango Tree">Mango Tree</option>
+                                <option value="Neem Tree">Neem Tree</option>
+                                <option value="Apple Tree">Apple Tree</option>
+                            </optgroup>
+                            <optgroup label="Indoor & Medical">
+                                <option value="Aloe Vera">Aloe Vera</option>
+                                <option value="Money Plant">Money Plant</option>
+                                <option value="Tulsi">Tulsi</option>
+                            </optgroup>
+                        </select>
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+                    <div class="input-field">
+                        <label for="plantCustom">Or Custom Name:</label>
+                        <input type="text" id="plantCustom" placeholder="Type if not in list...">
+                    </div>
+                    <div class="input-field">
+                        <label for="plantAge">Age (Months):</label>
+                        <input type="number" id="plantAge" placeholder="e.g. 12">
+                        <span class="error-msg" id="ageError"></span>
+                    </div>
+                    <div class="input-field">
+                        <label for="plantLocation">Location in House:</label>
+                        <input type="text" id="plantLocation" placeholder="e.g. Balcony">
+                        <span class="error-msg" id="locError"></span>
+                    </div>
+                    <div class="input-field">
+                        <label for="plantNotes">Special Care Notes:</label>
+                        <input type="text" id="plantNotes" placeholder="e.g. Indirect sunlight">
+                        <span class="error-msg" id="notesError"></span>
+                    </div>
+                </div>
+                <button type="submit" class="add-btn">Add to Collection</button>
+            </form>
+        </section>
+
+        <div id="loadingState" class="status-message">⏳ Loading plant database...</div>
+        <div id="errorState" class="status-message error-txt" style="display: none;">❌ Error: JSON Server unreachable. Please run 'npx json-server'.</div>
+
+        <h2 id="gridTitle">All Collection</h2>
+        <div id="plantGrid" class="plant-grid"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
