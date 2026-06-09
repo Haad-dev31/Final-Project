@@ -1,0 +1,49 @@
+{
+  "plants": [
+    {
+      "id": "1",
+      "name": "Rose",
+      "category": "Flowers",
+      "age": 6,
+      "location": "Front Terrace",
+      "notes": "Needs daily water",
+      "addedAt": "6/1/2026, 11:00:00 AM",
+      "waterCount": 3,
+      "lastWateredTime": 1780379124849
+    },
+    {
+      "id": "2",
+      "name": "Mango Tree",
+      "category": "Fruits & Trees",
+      "age": 24,
+      "location": "Main Garden",
+      "notes": "Needs direct sunlight",
+      "addedAt": "6/1/2026, 11:05:00 AM",
+      "waterCount": 2,
+      "lastWateredTime": 1780379126855
+    },
+    {
+      "id": "3",
+      "name": "Aloe Vera",
+      "category": "Indoor & Medical",
+      "age": 12,
+      "location": "Lounge Window",
+      "notes": "Water once a week",
+      "addedAt": "6/1/2026, 11:10:00 AM",
+      "waterCount": 6,
+      "lastWateredTime": 1780379128670
+    },
+    {
+      "name": "Neem Tree",
+      "category": "Fruits & Trees",
+      "age": 20,
+      "location": "Indoor",
+      "notes": "Give daily water",
+      "addedAt": "02/06/2026, 10:45:52",
+      "waterCount": 0,
+      "lastWateredTime": 1780379152260,
+      "id": "7Z5XDas2Y8Q"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
